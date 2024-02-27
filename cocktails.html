@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+        <title>Cocktails</title>
+        <link rel="stylesheet" type="text/css" href="estilos.css">
+        <link rel="stylesheet" type="text/css" href="header.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+        <header>
+            <div class="wrapper">
+                <div class="logo">Bob's Blog<img alt="Imagen gorro" src="./images/gorrochefcursor.png" width="50"></div>
+                <nav>
+                    <a href="nacionales.html">Recetas nacionales</a>
+                    <a href="internacionales.html">Recetas internacionales</a>
+                    <a href="restaurante.html">Nuestro restaurante</a>
+                    <a href="cerveceria.html">La Cervecería</a>
+                    <a href="cocktails.html">La Coctelería</a>
+                    <a href="contacto.html">Contacta con nosotros</a>
+                </nav>
+            </div>
+        </header>
+
+        <h1>LA COCTELERÍA DE BOB<img alt="Imagen gorro" src="./images/cocktail-removebg-preview.png" width="50"></h1>
+        <figure>
+            <img alt="Imagen cocteleria" src="./images/cocteleria.jpg" width="800">
+            <figcaption></figcaption>
+        </figure>
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Buscar Cocktail</title>
+        </head>
+        <body>
+            <h1>Descubre nuestros cocktails</h1>
+            <!-- Input para buscar el cocktail -->
+            <input type="text" id="nombreCocktail" oninput="filtrarCocktails()">
+            <!-- Desplegable para mostrar los cocktails -->
+            <select id="selectCocktails" onchange="rellenarInput()"></select>
+            <!-- Botón para buscar -->
+            <button onclick="buscarCocktail()">Buscar Cocktail</button>
+            <!-- Contenedor para mostrar el resultado -->
+            <div id="resultado"></div>
+        
+            <script src="cocktails.js"></script>
+        </body>
+</HTML>

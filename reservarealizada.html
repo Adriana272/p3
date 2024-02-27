@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+        <title>Formulario</title>
+        <link rel="stylesheet" type="text/css" href="estilos.css">
+        <link rel="stylesheet" type="text/css" href="header.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    
+    <body>
+        <script>
+            //var url = new URL("./src/restaurante.html");
+            // Obtener los parámetros de la URL (en el caso de un formulario GET)
+            const urlParams = new URLSearchParams(window.location.search);
+            const nombre = urlParams.get('nombre');
+            const apellidos = urlParams.get('apellidos');
+            const telefono = urlParams.get('telefono');
+            const email = urlParams.get('email');
+            const numero = urlParams.get('numero');
+            const start = urlParams.get('start');
+            const cbox1 = urlParams.get('cbox1');
+            const cbox2 = urlParams.get('cbox2');
+            const alergias = urlParams.get('alergias');
+            
+            // Mostrar los datos recuperados en la página
+            document.body.innerHTML = `
+              <div class="logo">El templo de Bob<img alt="Imagen gorro" src="./images/gorrochefcursor.png" width="50"></div>
+              <h1>SU RESERVA SE HA REALIZADO CON ÉXITO!</h1>
+              <h1>Datos de la reserva:</h1>
+              <h2>Datos personales:</h2>
+              <p>Nombre: ${nombre}</p>
+              <p>Apellidos: ${apellidos}</p>
+              <p>Teléfono: ${telefono}</p>
+              <p>Teléfono: ${email}</p>
+              <h2>Reserva:</h2>
+              <p>Número de comensales: ${numero}</p>
+              <p>Fecha: ${start}</p>
+              <h2>Extras:</h2>
+              <p>Sin alergias: ${cbox1}</p>
+              <p>Con alergias: ${cbox2}</p>
+              <p>Detalle alergias: ${alergias}</p>
+
+            `;
+          </script>
+          <footer>
+            <a href="index.html">Volver al inicio</a>
+          </footer>
+    </body>
+</HTML>
